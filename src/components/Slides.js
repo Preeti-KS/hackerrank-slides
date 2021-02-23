@@ -18,7 +18,7 @@ function Slides({slides}) {
     return (
         <div>
             <div id="navigation" className="text-center">
-                <button  data-testid="button-restart" className="small outlined" onClick={reset}>Restart</button>
+                <button disabled={currentSlide === 0} data-testid="button-restart" className="small outlined" onClick={reset}>Restart</button>
                 <button disabled={currentSlide === 0} data-testid="button-prev" className="small" onClick={previous}>Prev</button>
                 <button disabled={currentSlide === slides.length - 1} data-testid="button-next" className="small" onClick={next}>Next</button>
             </div>
